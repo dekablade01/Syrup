@@ -1,0 +1,2 @@
+project("Syrup.xcodeproj")
+scheme("Syrup")
