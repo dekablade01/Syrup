@@ -1,0 +1,9 @@
+language: swift
+rvm: 
+  - 2.2
+os: osx
+install: 
+  - bundle install
+script: 
+  - bundle exec fastlane build_for_testing
+  - bundle exec fastlane run_testing
