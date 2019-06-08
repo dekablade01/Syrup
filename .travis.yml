@@ -1,10 +1,13 @@
 language: swift
-rvm: 
+rvm:
   - 2.4.3
 os: osx
-install: 
+osx_image: xcode10.2
+before_install:
+  - gem update --system
   - gem install bundler
+install:
   - bundle install
-script: 
+script:
   - bundle exec fastlane build_for_testing
   - bundle exec fastlane run_testing
