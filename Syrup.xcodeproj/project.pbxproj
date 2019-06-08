@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9EF0007822AC2E3900379AAB /* Syrup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF0006E22AC2E3900379AAB /* Syrup.framework */; };
 		9EF0007F22AC2E3900379AAB /* Syrup.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF0007122AC2E3900379AAB /* Syrup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF000A822AC3D9200379AAB /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF000A722AC3D9200379AAB /* Callback.swift */; };
+		9EF000AF22AC45DF00379AAB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF000AE22AC45DF00379AAB /* CompletionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 		9EF0007222AC2E3900379AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EF0007722AC2E3900379AAB /* SyrupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyrupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF0007E22AC2E3900379AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EF000A722AC3D9200379AAB /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
+		9EF000AE22AC45DF00379AAB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 		9EF0007022AC2E3900379AAB /* Syrup */ = {
 			isa = PBXGroup;
 			children = (
+				9EF000A422AC3D5D00379AAB /* Swift */,
 				9EF0007222AC2E3900379AAB /* Info.plist */,
+				9EF0007122AC2E3900379AAB /* Syrup.h */,
 			);
 			path = Syrup;
 			sourceTree = "<group>";
@@ -77,9 +83,34 @@
 		9EF0007B22AC2E3900379AAB /* SyrupTests */ = {
 			isa = PBXGroup;
 			children = (
+				9EF000AA22AC3DC600379AAB /* Swift */,
 				9EF0007E22AC2E3900379AAB /* Info.plist */,
 			);
 			path = SyrupTests;
+			sourceTree = "<group>";
+		};
+		9EF000A422AC3D5D00379AAB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9EF000A622AC3D8200379AAB /* Type Alias */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		9EF000A622AC3D8200379AAB /* Type Alias */ = {
+			isa = PBXGroup;
+			children = (
+				9EF000A722AC3D9200379AAB /* Callback.swift */,
+				9EF000AE22AC45DF00379AAB /* CompletionHandler.swift */,
+			);
+			path = "Type Alias";
+			sourceTree = "<group>";
+		};
+		9EF000AA22AC3DC600379AAB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +175,11 @@
 				TargetAttributes = {
 					9EF0006D22AC2E3900379AAB = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					9EF0007622AC2E3900379AAB = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -190,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF000AF22AC45DF00379AAB /* CompletionHandler.swift in Sources */,
+				9EF000A822AC3D9200379AAB /* Callback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +371,7 @@
 		9EF0008322AC2E3900379AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -353,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.issarapong.syrup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,6 +398,7 @@
 		9EF0008422AC2E3900379AAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -386,6 +424,8 @@
 		9EF0008622AC2E3900379AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				INFOPLIST_FILE = SyrupTests/Info.plist;
@@ -396,6 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.issarapong.SyrupTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -404,6 +445,8 @@
 		9EF0008722AC2E3900379AAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				INFOPLIST_FILE = SyrupTests/Info.plist;
