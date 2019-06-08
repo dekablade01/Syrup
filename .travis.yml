@@ -1,6 +1,6 @@
 language: swift
 rvm: 
-  - 2.2
+  - 2.4.3
 os: osx
 install: 
   - gem install bundler
