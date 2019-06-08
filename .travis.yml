@@ -3,6 +3,7 @@ rvm:
   - 2.2
 os: osx
 install: 
+  - gem install bundler
   - bundle install
 script: 
   - bundle exec fastlane build_for_testing
